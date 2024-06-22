@@ -35,12 +35,6 @@ struct ColorPickerView: View {
     }
 }
 
-//struct ColorPickerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ColorPickerView(selectedColor: .constant(.yellow))
-//    }
-//}
-
 #Preview {
     ColorPickerView(selectedColor: .constant(.yellow))
 }

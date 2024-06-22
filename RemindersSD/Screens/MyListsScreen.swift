@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MyListsScreen: View {
 
+    @State private var isPresented = false
     let myLists = ["Służbowe", "Zakupy", "Rozrywka"]
     var body: some View {
         NavigationStack {
@@ -22,7 +23,7 @@ struct MyListsScreen: View {
                 }
 
                 Button(action: {
-                  //  showAddListModal.toggle()
+                 isPresented.toggle()
                 },label: {
                     Text("Add List")
                         .foregroundStyle(.blue)
@@ -32,6 +33,11 @@ struct MyListsScreen: View {
             }
             .listStyle(.plain)
             .navigationTitle("My Lists")
+            .sheet(isPresented: $isPresented) {
+                NavigationStack{
+                    AddMyListScreen()
+                }
+            }
         }
     }
 }
