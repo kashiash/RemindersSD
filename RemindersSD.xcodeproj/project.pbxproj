@@ -11,6 +11,9 @@
 		76955FE12C26D59900452A26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76955FE02C26D59900452A26 /* ContentView.swift */; };
 		76955FE32C26D59B00452A26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76955FE22C26D59B00452A26 /* Assets.xcassets */; };
 		76955FE72C26D59B00452A26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76955FE62C26D59B00452A26 /* Preview Assets.xcassets */; };
+		76955FEF2C26D90200452A26 /* MyListsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76955FEE2C26D90200452A26 /* MyListsScreen.swift */; };
+		76955FF12C26E16200452A26 /* AddMyListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76955FF02C26E16200452A26 /* AddMyListScreen.swift */; };
+		76955FF42C26E6A400452A26 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76955FF32C26E6A400452A26 /* ColorPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		76955FE22C26D59B00452A26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76955FE42C26D59B00452A26 /* RemindersSD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemindersSD.entitlements; sourceTree = "<group>"; };
 		76955FE62C26D59B00452A26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		76955FEE2C26D90200452A26 /* MyListsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListsScreen.swift; sourceTree = "<group>"; };
+		76955FF02C26E16200452A26 /* AddMyListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMyListScreen.swift; sourceTree = "<group>"; };
+		76955FF32C26E6A400452A26 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,8 @@
 		76955FDD2C26D59900452A26 /* RemindersSD */ = {
 			isa = PBXGroup;
 			children = (
+				76955FF22C26E69600452A26 /* Views */,
+				76955FED2C26D84900452A26 /* Screens */,
 				76955FDE2C26D59900452A26 /* RemindersSDApp.swift */,
 				76955FE02C26D59900452A26 /* ContentView.swift */,
 				76955FE22C26D59B00452A26 /* Assets.xcassets */,
@@ -67,6 +75,23 @@
 				76955FE62C26D59B00452A26 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		76955FED2C26D84900452A26 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				76955FEE2C26D90200452A26 /* MyListsScreen.swift */,
+				76955FF02C26E16200452A26 /* AddMyListScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		76955FF22C26E69600452A26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				76955FF32C26E6A400452A26 /* ColorPickerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76955FEF2C26D90200452A26 /* MyListsScreen.swift in Sources */,
 				76955FE12C26D59900452A26 /* ContentView.swift in Sources */,
 				76955FDF2C26D59900452A26 /* RemindersSDApp.swift in Sources */,
+				76955FF12C26E16200452A26 /* AddMyListScreen.swift in Sources */,
+				76955FF42C26E6A400452A26 /* ColorPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
