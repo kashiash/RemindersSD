@@ -14,6 +14,7 @@
 		76955FEF2C26D90200452A26 /* MyListsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76955FEE2C26D90200452A26 /* MyListsScreen.swift */; };
 		76955FF12C26E16200452A26 /* AddMyListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76955FF02C26E16200452A26 /* AddMyListScreen.swift */; };
 		76955FF42C26E6A400452A26 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76955FF32C26E6A400452A26 /* ColorPickerView.swift */; };
+		76F24C732C28AD04003D57B8 /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F24C722C28AD04003D57B8 /* MyList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		76955FEE2C26D90200452A26 /* MyListsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListsScreen.swift; sourceTree = "<group>"; };
 		76955FF02C26E16200452A26 /* AddMyListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMyListScreen.swift; sourceTree = "<group>"; };
 		76955FF32C26E6A400452A26 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		76F24C722C28AD04003D57B8 /* MyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		76955FDD2C26D59900452A26 /* RemindersSD */ = {
 			isa = PBXGroup;
 			children = (
+				76F24C712C28ACEE003D57B8 /* Models */,
 				76955FF22C26E69600452A26 /* Views */,
 				76955FED2C26D84900452A26 /* Screens */,
 				76955FDE2C26D59900452A26 /* RemindersSDApp.swift */,
@@ -92,6 +95,14 @@
 				76955FF32C26E6A400452A26 /* ColorPickerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		76F24C712C28ACEE003D57B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				76F24C722C28AD04003D57B8 /* MyList.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 				76955FDF2C26D59900452A26 /* RemindersSDApp.swift in Sources */,
 				76955FF12C26E16200452A26 /* AddMyListScreen.swift in Sources */,
 				76955FF42C26E6A400452A26 /* ColorPickerView.swift in Sources */,
+				76F24C732C28AD04003D57B8 /* MyList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
