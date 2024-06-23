@@ -15,6 +15,7 @@
 		76955FF12C26E16200452A26 /* AddMyListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76955FF02C26E16200452A26 /* AddMyListScreen.swift */; };
 		76955FF42C26E6A400452A26 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76955FF32C26E6A400452A26 /* ColorPickerView.swift */; };
 		76F24C732C28AD04003D57B8 /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F24C722C28AD04003D57B8 /* MyList.swift */; };
+		76F24C752C28B40E003D57B8 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F24C742C28B40E003D57B8 /* PreviewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		76955FF02C26E16200452A26 /* AddMyListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMyListScreen.swift; sourceTree = "<group>"; };
 		76955FF32C26E6A400452A26 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		76F24C722C28AD04003D57B8 /* MyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
+		76F24C742C28B40E003D57B8 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				76955FE62C26D59B00452A26 /* Preview Assets.xcassets */,
+				76F24C742C28B40E003D57B8 /* PreviewContainer.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				76955FDF2C26D59900452A26 /* RemindersSDApp.swift in Sources */,
 				76955FF12C26E16200452A26 /* AddMyListScreen.swift in Sources */,
 				76955FF42C26E6A400452A26 /* ColorPickerView.swift in Sources */,
+				76F24C752C28B40E003D57B8 /* PreviewContainer.swift in Sources */,
 				76F24C732C28AD04003D57B8 /* MyList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MyListsScreen: View {
 
@@ -42,8 +43,9 @@ struct MyListsScreen: View {
     }
 }
 
-#Preview {
+#Preview { @MainActor in
     NavigationStack {
         MyListsScreen()
     }
+    .modelContainer(previewContainer)
 }
