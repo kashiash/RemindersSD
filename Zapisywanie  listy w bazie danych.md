@@ -119,9 +119,71 @@ Widać, że te dwa elementy pochodzą teraz z naszego kontenera podglądu. To ca
 
 Musimy również wstrzyknąć tutaj **modelContainer** dla naszego kontenera podglądu. Powiedzmy **previewContainer**, który jest dostępny tylko na głównym aktorze. Będziemy musieli użyć **mainActor**.
 
-Problem jest taki, że mamy wybrany kolor, ale jest on typu **Color**. Jeśli przejdę do **Color**, widać, że to struktura, która jest zgodna z **Hashable**, **CustomStringConvertible**, **Sendable**, ale to struktura. Musimy przekształcić ten kolor jakoś w kod hex. Jak to zrobić? Udało mi się poprosić **ChatGPT** o napisanie kodu, który pozwoli nam przekształcić kolor w hex. Dodam nową grupę o nazwie **Extensions**, nowy plik, i będzie to rozszerzenie na **Color**. **Color+Extensions**. Dodam rozszerzenie do **Color**, ale najpierw zaimportuję **SwiftUI**, ponieważ tam znajduje się **Color**. Powiem **extension Color** i teraz mogę zaimplementować funkcję **toHex**. Funkcja **toHex** będzie odpowiedzialna za przekształcenie koloru w hex. Użyjmy jej.
+Problem jest taki, że mamy wybrany kolor, ale jest on typu **Color**. Jeśli przejdę do definicji **Color**, widać, że to struktura, która jest zgodna z **Hashable**, **CustomStringConvertible**, **Sendable**, ale to struktura. Musimy przekształcić ten kolor jakoś w kod hex. Jak to zrobić? Udało mi się poprosić **ChatGPT** o napisanie kodu, który pozwoli nam przekształcić kolor w hex. Dodam nową grupę o nazwie **Extensions**, nowy plik, i będzie to rozszerzenie na **Color**. **Color+Extensions**. Dodam rozszerzenie do **Color**, ale najpierw zaimportuję **SwiftUI**, ponieważ tam znajduje się **Color**. Powiem **extension Color** i teraz mogę zaimplementować funkcję **toHex**. Funkcja **toHex** będzie odpowiedzialna za przekształcenie koloru w hex. Użyjmy jej.
+
+```swift
+import Foundation
+import SwiftUI
+
+extension Color {
+    
+    func toHex() -> String? {
+        let uic = UIColor(self)
+        guard let components = uic.cgColor.components, components.count >= 3 else {
+            return nil
+        }
+        let r = Float(components[0])
+        let g = Float(components[1])
+        let b = Float(components[2])
+        var a = Float(1.0)
+        
+        if components.count >= 4 {
+            a = Float(components[3])
+        }
+        
+        if a != Float(1.0) {
+            return String(format: "%02lX%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255), lroundf(a * 255))
+        } else {
+            return String(format: "%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255))
+        }
+    }
+    
+    init(hex: String) {
+            // Remove '#' if exists
+            var cleanedHex = hex
+            if hex.hasPrefix("#") {
+                cleanedHex = String(hex.dropFirst())
+            }
+            
+            // Convert hex to RGB
+            var rgb: UInt64 = 0
+            Scanner(string: cleanedHex).scanHexInt64(&rgb)
+            
+            let red = Double((rgb & 0xFF0000) >> 16) / 255.0
+            let green = Double((rgb & 0x00FF00) >> 8) / 255.0
+            let blue = Double(rgb & 0x0000FF) / 255.0
+            
+            self.init(red: red, green: green, blue: blue)
+        }
+    
+}
+```
 
 Jeśli chcesz więcej szczegółów na temat tej funkcji, możesz wkleić ten kod do **ChatGPT** i dowiedzieć się więcej. W zasadzie wyodrębnia ona wartości RGB i tworzy odpowiedni ciąg hex. Wracamy i próbujemy uzyskać hex. Powiem **hex**, a następnie **color.toHex**, co zwróci nam opcjonalny ciąg, więc możemy go rozpakować. Teraz powinienem być w stanie przekazać hex. Na koniec powiem **context**, do którego nie mamy dostępu. Przejdźmy na górę i uzyskajmy dostęp do kontekstu, który będzie **modelContext**, prywatna zmienna **context**. Wracamy tutaj i powiemy **context.insert myList**. Po wstawieniu możemy zamknąć okno.
+
+```swift
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("Done") {
+                    // Zapis adanych
+                    guard let colorhex = color.toHex() else {
+                        return
+                    }
+                    let myList = MyList(name: listName, colorsCode: colorhex)
+                    context.insert(myList)
+                    dismiss()
+                }
+            }
+```
 
 Wracamy do ekranu **My List** i próbujemy dodać nową listę. Mamy backlog, mamy przypomnienia. Dodajmy coś, powiedzmy **groceries**. **Groceries**, zielony kolor, i powiedzmy **done**. **Groceries** zostało dodane. Ale jedna rzecz, którą można zauważyć, to że to nie jest zielony kolor. To jest czarny. Musimy to naprawić.
 
