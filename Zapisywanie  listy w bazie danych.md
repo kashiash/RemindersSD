@@ -94,7 +94,26 @@ Wracamy do ekranu **My List**. Dla podglądów powinniśmy być w stanie ustawi�
 }
 ```
 
-Teraz wiemy, że kiedy dostarczamy kontener podglądu do naszej aplikacji, ten kontener zawiera również dwa elementy. Pamiętacie, kiedy mieliśmy te elementy, ten i ten, i wstawialiśmy je do kontenera? To jest kontener podglądu. Oznacza to, że mogę spróbować pobrać te elementy i wyświetlić je zamiast tej zakodowanej na stałe tablicy **myList**. Powiedzmy **query myList**, co będzie **myList**. Możemy usunąć tę część. Jeśli chcę wyświetlić **myList**, nie potrzebuję tutaj ID, ponieważ **myList** już ma automatycznie utworzone ID. Jest już identyfikowalny. **MyList** to teraz klasa, która ma właściwość o nazwie **name**. Możemy jej użyć. Możemy użyć jednej z właściwości **name** i wyświetlić te elementy.
+Teraz wiemy, że kiedy dostarczamy kontener podglądu do naszej aplikacji, ten kontener zawiera również dwa elementy. Oznacza to, że mogę spróbować pobrać te elementy i wyświetlić je zamiast tej zakodowanej na stałe tablicy **myList**. 
+
+Zamieńmy sztywna deklarację na zapytanie oznaczone adnotacją Query
+
+```swift
+    @Query private var myLists: [MyList]
+ //   let myLists = ["Służbowe", "Zakupy", "Rozrywka"]
+```
+
+w prowadzmy drobne poprawki w pętli forEach gdzie juz nie potrzebujemy wskazywać identyfikatora, bo nasz klasa juz go ma. i w polu tekstowym poprawmy ze wyswietlamy name z obiektu list.
+
+```swift
+                ForEach(myLists) { list in
+                    HStack{
+                        Image(systemName: "line.3.horizontal.circle.fill")
+                            .foregroundColor(.black)
+                        Text(list.name)
+                    }
+                }
+```
 
 Widać, że te dwa elementy pochodzą teraz z naszego kontenera podglądu. To całkiem fajne. Następną rzeczą, którą chcemy zrobić, jest faktyczne dodanie **myList** do ekranu lub do bazy danych. Widać, że w funkcji **done** nie robimy nic. Zróbmy coś. Jeśli stworzę instancję **myList**, potrzebujemy nazwy i kodu koloru. Nazwa jest łatwa, ponieważ pochodzi z pola tekstowego, które możemy po prostu uzyskać przez **listName**. Kod koloru pochodzi z koloru. Nie ma domyślnej opcji, aby powiedzieć, że ten kolor, który jest typu **Color**, daje nam kod koloru. Musimy coś z tym zrobić.
 

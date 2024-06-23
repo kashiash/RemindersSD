@@ -11,15 +11,17 @@ import SwiftData
 struct MyListsScreen: View {
 
     @State private var isPresented = false
-    let myLists = ["Służbowe", "Zakupy", "Rozrywka"]
+    @Query private var myLists: [MyList]
+ //   let myLists = ["Służbowe", "Zakupy", "Rozrywka"]
+
     var body: some View {
         NavigationStack {
             List {
-                ForEach(myLists, id: \.self) { list in
+                ForEach(myLists) { list in
                     HStack{
                         Image(systemName: "line.3.horizontal.circle.fill")
                             .foregroundColor(.black)
-                        Text(list)
+                        Text(list.name)
                     }
                 }
 
@@ -34,6 +36,7 @@ struct MyListsScreen: View {
             }
             .listStyle(.plain)
             .navigationTitle("My Lists")
+            .navigationBarTitleDisplayMode(.inline)
             .sheet(isPresented: $isPresented) {
                 NavigationStack{
                     AddMyListScreen()
