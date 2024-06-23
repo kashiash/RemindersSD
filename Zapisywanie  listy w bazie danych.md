@@ -189,9 +189,32 @@ Wracamy do ekranu **My List** i próbujemy dodać nową listę. Mamy backlog, ma
 
 Problem polega na tym, że kiedy wyświetlamy te elementy, nie mówimy obrazowi, że styl pierwszego planu będzie pochodził z **myList.color**. Mamy coś takiego jak **myList.colorCode**. Oznacza to, że mamy kod koloru i musimy go przekształcić w rzeczywisty kolor. Pokażę wam, że ten kod pochodzi z bloga **Marco Edinger**. To naprawdę dobry post o przekształcaniu hex w kolor i z powrotem w **SwiftUI**. Dostarczył on kod. Dodam link do tego artykułu. To naprawdę dobry artykuł, warto go przeczytać. Możemy użyć tego kodu, aby przekształcić kolor w hex z powrotem w rzeczywisty kolor. To jest dokładnie to, co chcemy zrobić. Wracamy do rozszerzeń koloru i dodajemy to.
 
-Jeśli przekażemy ciąg hex, zainicjuje to nowy kolor. Wracamy i możemy to zrobić tutaj. Powiemy **foregroundStyle**, a tutaj powiemy, że kolor powinien być z hex, prawdopodobnie **hex myList.colorCode**. Przekazujemy kod koloru, a następnie otrzymujemy kolor. Widać, że już działa, ponieważ backlog jest fioletowy, a to jest zielony. Dodajmy jeszcze jeden. Nazwijmy go **entertainment**. Dodajmy to. Teraz widzisz czerwony kolor. Wygląda na to, że wszystko działa. Wszystko jest teraz zapisywane do bazy danych. Przez bazę danych rozumiem bazę danych w pamięci. Ale jeśli uruchomisz to na rzeczywistym urządzeniu, zapisze to do rzeczywistego urządzenia. Ale nie uruchamiaj teraz, ponieważ nie skończyliśmy pracy nad klonem aplikacji przypomnień.
+Jeśli przekażemy ciąg hex, zainicjuje to nowy kolor. Wracamy i możemy to zrobić tutaj. Powiemy **foregroundStyle**, a tutaj powiemy, że kolor powinien być z hex, prawdopodobnie **hex myList.colorCode**. Przekazujemy kod koloru, a następnie otrzymujemy kolor. 
+
+
+
+```swift
+                    HStack{
+                        Image(systemName: "line.3.horizontal.circle.fill")
+                            .foregroundColor(Color(hex: list.colorsCode))
+                        Text(list.name)
+                    }
+```
+
+Widać, że już działa, ponieważ backlog jest fioletowy, a to jest zielony. Dodajmy jeszcze jeden. Nazwijmy go **entertainment**. Dodajmy to. Teraz widzisz czerwony kolor. Wygląda na to, że wszystko działa. Wszystko jest teraz zapisywane do bazy danych. Przez bazę danych rozumiem bazę danych w pamięci. Ale jeśli uruchomisz to na rzeczywistym urządzeniu, zapisze to do rzeczywistego urządzenia. Ale nie uruchamiaj teraz, ponieważ nie skończyliśmy pracy nad klonem aplikacji przypomnień.
 
 Przechodzimy do pliku aplikacji, który jest twoim plikiem **App**. Zamiast używać **ContentView**, możemy usunąć **ContentView**. Nie będziemy go używać. Usuńmy go. Nasz ekran główny nazywa się **MyListScreen**. Używamy **NavigationStack**. Będziemy używać **modelContainer**. Nie naprawdę **modelContainer** per se. Nie będziemy używać kontenera podglądu, ponieważ to jest prawdziwa aplikacja. Powiemy po prostu **MyList.self**. To powinno wystarczyć do uruchomienia na rzeczywistym urządzeniu.
+
+```swift
+@main
+struct RemindersSDApp: App {
+    var body: some Scene {
+        WindowGroup {
+            MyListsScreen()
+        }.modelContainer(for:MyList.self)
+    }
+}
+```
 
 Uruchommy to. Kiedy zapisuje informacje, zapisze je do rzeczywistej bazy danych. Powiedzmy **reminders**. Uruchommy to ponownie. **Reminders**, **groceries**. Mamy oba. Widać, że są zapisywane do rzeczywistej bazy danych.
 

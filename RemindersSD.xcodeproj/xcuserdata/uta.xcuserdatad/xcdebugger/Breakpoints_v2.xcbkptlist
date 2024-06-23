@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D2EB87BA-3566-4549-8944-4FE1FC7B9A74"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RemindersSD/Screens/AddMyListScreen.swift"
@@ -18,6 +18,36 @@
             endingLineNumber = "35"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D2EB87BA-3566-4549-8944-4FE1FC7B9A74 - 40b4a32f4adb5f02"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; &lt;&lt;opaque return type of static SwiftUI.ToolbarContentBuilder.buildBlock&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: SwiftUI.ToolbarContent, &#x3c4;_0_1: SwiftUI.ToolbarContent&gt;(&#x3c4;_0_0, &#x3c4;_0_1) -&gt; some&gt;&gt;.0 in RemindersSD.AddMyListScreen.body.getter : some"
+                  moduleName = "RemindersSD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uta/Desktop/biezace%20projekty/RemindersSD/RemindersSD/Screens/AddMyListScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35">
+               </Location>
+               <Location
+                  uuid = "D2EB87BA-3566-4549-8944-4FE1FC7B9A74 - a0c408f21ff613c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in closure #2 () -&gt; &lt;&lt;opaque return type of static SwiftUI.ToolbarContentBuilder.buildBlock&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: SwiftUI.ToolbarContent, &#x3c4;_0_1: SwiftUI.ToolbarContent&gt;(&#x3c4;_0_0, &#x3c4;_0_1) -&gt; some&gt;&gt;.0 in RemindersSD.AddMyListScreen.body.getter : some"
+                  moduleName = "RemindersSD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uta/Desktop/biezace%20projekty/RemindersSD/RemindersSD/Screens/AddMyListScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
