@@ -19,7 +19,7 @@ struct MyListsScreen: View {
             List {
                 ForEach(myLists) { list in
                     NavigationLink {
-                        MyListDetailScreen()
+                        MyListDetailScreen(myList: list)
                     } label: {
                         HStack{
                             Image(systemName: "line.3.horizontal.circle.fill")
