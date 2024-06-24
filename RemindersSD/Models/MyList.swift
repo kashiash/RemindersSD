@@ -12,6 +12,8 @@ import SwiftData
 class MyList {
     var name: String
     var colorsCode: String
+    @Relationship(deleteRule: .cascade)
+    var reminders: [Reminder] = []
     init(name: String, colorsCode: String) {
         self.name = name
         self.colorsCode = colorsCode

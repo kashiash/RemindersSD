@@ -17,6 +17,7 @@
 		76F24C732C28AD04003D57B8 /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F24C722C28AD04003D57B8 /* MyList.swift */; };
 		76F24C752C28B40E003D57B8 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F24C742C28B40E003D57B8 /* PreviewContainer.swift */; };
 		76F24C782C28C89E003D57B8 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F24C772C28C89E003D57B8 /* Color+Extensions.swift */; };
+		76F24C7A2C2A15A9003D57B8 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F24C792C2A15A9003D57B8 /* Reminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		76F24C722C28AD04003D57B8 /* MyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
 		76F24C742C28B40E003D57B8 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		76F24C772C28C89E003D57B8 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		76F24C792C2A15A9003D57B8 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				76F24C722C28AD04003D57B8 /* MyList.swift */,
+				76F24C792C2A15A9003D57B8 /* Reminder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				76F24C782C28C89E003D57B8 /* Color+Extensions.swift in Sources */,
 				76955FF12C26E16200452A26 /* AddMyListScreen.swift in Sources */,
 				76955FF42C26E6A400452A26 /* ColorPickerView.swift in Sources */,
+				76F24C7A2C2A15A9003D57B8 /* Reminder.swift in Sources */,
 				76F24C752C28B40E003D57B8 /* PreviewContainer.swift in Sources */,
 				76F24C732C28AD04003D57B8 /* MyList.swift in Sources */,
 			);
