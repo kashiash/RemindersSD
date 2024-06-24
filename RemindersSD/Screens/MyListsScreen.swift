@@ -18,10 +18,14 @@ struct MyListsScreen: View {
         NavigationStack {
             List {
                 ForEach(myLists) { list in
-                    HStack{
-                        Image(systemName: "line.3.horizontal.circle.fill")
-                            .foregroundColor(Color(hex: list.colorsCode))
-                        Text(list.name)
+                    NavigationLink {
+                        MyListDetailScreen()
+                    } label: {
+                        HStack{
+                            Image(systemName: "line.3.horizontal.circle.fill")
+                                .foregroundColor(Color(hex: list.colorsCode))
+                            Text(list.name)
+                        }
                     }
                 }
 
