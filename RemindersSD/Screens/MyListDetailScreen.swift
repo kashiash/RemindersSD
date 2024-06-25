@@ -15,6 +15,10 @@ struct MyListDetailScreen: View {
     @State private var title: String = ""
     @State private var isSheetPresented = false
 
+    private var isFormValid: Bool {
+        !title.isEmptyOrWhitespace
+    }
+
     var body: some View {
         VStack {
             List(myList.reminders) { reminder in
@@ -39,7 +43,7 @@ struct MyListDetailScreen: View {
             Button("Cancel",role: .cancel) {}
             Button("Done") {
                 saveReminder()
-            }
+            }.disabled(!isFormValid)
         }
     }
 

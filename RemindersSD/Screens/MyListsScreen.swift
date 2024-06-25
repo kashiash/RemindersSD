@@ -14,6 +14,8 @@ struct MyListsScreen: View {
     @Query private var myLists: [MyList]
  //   let myLists = ["Służbowe", "Zakupy", "Rozrywka"]
 
+
+
     var body: some View {
         NavigationStack {
             List {

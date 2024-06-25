@@ -19,6 +19,7 @@
 		76F24C782C28C89E003D57B8 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F24C772C28C89E003D57B8 /* Color+Extensions.swift */; };
 		76F24C7A2C2A15A9003D57B8 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F24C792C2A15A9003D57B8 /* Reminder.swift */; };
 		76F24C7C2C2A179B003D57B8 /* MyListDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F24C7B2C2A179B003D57B8 /* MyListDetailScreen.swift */; };
+		76F24C7E2C2A9C19003D57B8 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F24C7D2C2A9C19003D57B8 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		76F24C772C28C89E003D57B8 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		76F24C792C2A15A9003D57B8 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		76F24C7B2C2A179B003D57B8 /* MyListDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListDetailScreen.swift; sourceTree = "<group>"; };
+		76F24C7D2C2A9C19003D57B8 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				76F24C772C28C89E003D57B8 /* Color+Extensions.swift */,
+				76F24C7D2C2A9C19003D57B8 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76955FEF2C26D90200452A26 /* MyListsScreen.swift in Sources */,
+				76F24C7E2C2A9C19003D57B8 /* String+Extensions.swift in Sources */,
 				76955FE12C26D59900452A26 /* ContentView.swift in Sources */,
 				76F24C7C2C2A179B003D57B8 /* MyListDetailScreen.swift in Sources */,
 				76955FDF2C26D59900452A26 /* RemindersSDApp.swift in Sources */,
